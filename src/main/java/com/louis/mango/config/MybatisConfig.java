@@ -27,10 +27,12 @@ public class MybatisConfig {
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-        sessionFactory.setTypeAliasesPackage("com.louis.mango.**.model");    // 扫描Model
+        // 扫描Model
+        sessionFactory.setTypeAliasesPackage("com.louis.mango.**.model");
 
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        sessionFactory.setMapperLocations(resolver.getResources("classpath*:**/sqlmap/*.xml"));    // 扫描映射文件
+        // 扫描映射文件
+        sessionFactory.setMapperLocations(resolver.getResources("classpath*:**/sqlmap/*.xml"));
 
         return sessionFactory.getObject();
     }
