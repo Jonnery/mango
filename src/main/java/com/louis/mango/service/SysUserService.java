@@ -5,6 +5,7 @@ import java.util.List;
 import com.louis.mango.model.SysUser;
 
 /**
+ * 服务类
  * @author Guilin
  */
 public interface SysUserService {

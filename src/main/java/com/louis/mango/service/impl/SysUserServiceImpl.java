@@ -11,7 +11,7 @@ import com.louis.mango.model.SysUser;
 import com.louis.mango.service.SysUserService;
 
 /**
- *
+ * 服务实现类
  * @author Guilin
  */
 @Service
